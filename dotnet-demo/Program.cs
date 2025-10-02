@@ -16,7 +16,7 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
-        builder.AddNpgsqlDataSource("postgres");
+        builder.AddNpgsqlDataSource("appdb");
 
         var app = builder.Build();
 
