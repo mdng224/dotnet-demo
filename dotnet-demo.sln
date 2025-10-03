@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-demo", "dotnet-demo\dotnet-demo.csproj", "{DFCC4F9D-1ECB-C00F-69B4-8762F7EC803D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Api", "dotnet-demo\App.Api.csproj", "{DFCC4F9D-1ECB-C00F-69B4-8762F7EC803D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-demo.AppHost", "dotnet-demo.AppHost\dotnet-demo.AppHost.csproj", "{A69C6DB7-A043-459B-AC01-4315BB0AEAEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.AppHost", "dotnet-demo.AppHost\App.AppHost.csproj", "{A69C6DB7-A043-459B-AC01-4315BB0AEAEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-demo.ServiceDefaults", "dotnet-demo.ServiceDefaults\dotnet-demo.ServiceDefaults.csproj", "{483E0A36-5071-5F82-7381-4D8FAAB28C19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.ServiceDefaults", "dotnet-demo.ServiceDefaults\App.ServiceDefaults.csproj", "{483E0A36-5071-5F82-7381-4D8FAAB28C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Application", "App.Application\App.Application.csproj", "{8A3C3B01-9137-46DC-BB90-53AA94D25B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infrastructure", "App.Infrastructure\App.Infrastructure.csproj", "{8726F249-6692-44BA-9605-5AD4154B283E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Domain", "App.Domain\App.Domain.csproj", "{8EBAE260-A3F7-4902-B27D-59D74EF82236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{483E0A36-5071-5F82-7381-4D8FAAB28C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483E0A36-5071-5F82-7381-4D8FAAB28C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483E0A36-5071-5F82-7381-4D8FAAB28C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3C3B01-9137-46DC-BB90-53AA94D25B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3C3B01-9137-46DC-BB90-53AA94D25B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3C3B01-9137-46DC-BB90-53AA94D25B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3C3B01-9137-46DC-BB90-53AA94D25B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8726F249-6692-44BA-9605-5AD4154B283E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8726F249-6692-44BA-9605-5AD4154B283E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8726F249-6692-44BA-9605-5AD4154B283E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8726F249-6692-44BA-9605-5AD4154B283E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBAE260-A3F7-4902-B27D-59D74EF82236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBAE260-A3F7-4902-B27D-59D74EF82236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBAE260-A3F7-4902-B27D-59D74EF82236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBAE260-A3F7-4902-B27D-59D74EF82236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

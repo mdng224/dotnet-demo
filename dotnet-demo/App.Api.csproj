@@ -4,7 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>dotnet_demo</RootNamespace>
+    <RootNamespace>App.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\dotnet-demo.ServiceDefaults\dotnet-demo.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\dotnet-demo.ServiceDefaults\App.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\App.Application\App.Application.csproj" />
+    <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@ var postgres = builder.AddPostgres("postgres") // name matters here
 var pgDbName = builder.Configuration["Postgres:Database"] ?? "appdb";
 var appDb = postgres.AddDatabase(pgDbName);
 
-builder.AddProject<Projects.dotnet_demo>("dotnet-demo")
+builder.AddProject<Projects.App_Api>("App")
        .WithReference(appDb)     // injects ConnectionStrings:{pgDbName}
        .WaitFor(appDb);          // API waits for DB health
 
