@@ -1,19 +1,28 @@
+using Aspire.Hosting;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
-// optional: pin version + keep data in a named Docker volume
+// Postgres container
 var pgVersion = builder.Configuration["Postgres:Version"] ?? "16";
-
 var postgres = builder.AddPostgres("postgres") // name matters here
-    .WithImageTag("16")
+    .WithImageTag(pgVersion)
     .WithDataVolume("pgdata"); // reuse this named Docker volume
-
-
-// create a logical database; this name becomes your ConnectionStrings key
 var pgDbName = builder.Configuration["Postgres:Database"] ?? "appdb";
 var appDb = postgres.AddDatabase(pgDbName);
 
+// API
 builder.AddProject<Projects.App_Api>("App")
-       .WithReference(appDb)     // injects ConnectionStrings:{pgDbName}
-       .WaitFor(appDb);          // API waits for DB health
+       .WithReference(appDb)
+       .WaitFor(appDb)
+       .WithHttpEndpoint(port: 5000, name: "api");
+
+// --- Vue dev server (Vite) ---
+builder.AddExecutable(
+        name: "frontend",
+        command: "npm",
+        workingDirectory: "../frontend",
+        args: ["run", "dev"]
+    )
+    .WithHttpEndpoint(port: 5173, name: "frontend", isProxied: false);
 
 builder.Build().Run();

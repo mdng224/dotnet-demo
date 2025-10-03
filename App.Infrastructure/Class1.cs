@@ -1,7 +1,6 @@
-﻿namespace App.Infrastructure
-{
-    public class Class1
-    {
+﻿namespace App.Infrastructure;
 
-    }
+public class Class1
+{
+
 }

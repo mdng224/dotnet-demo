@@ -1,5 +1,6 @@
+using App.ServiceDefaults;
 
-namespace dotnet_demo;
+namespace App.Api;
 
 public class Program
 {

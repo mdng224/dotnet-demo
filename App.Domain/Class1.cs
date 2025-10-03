@@ -1,7 +1,6 @@
-﻿namespace App.Domain
-{
-    public class Class1
-    {
+﻿namespace App.Domain;
 
-    }
+public class Class1
+{
+
 }
