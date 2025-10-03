@@ -15,21 +15,21 @@ This solution demonstrates clean separation of concerns with four core projects:
 
 ## 🏗️ Project Layout
 
-`
+```text
 src/
-├─ App.Api/ # Minimal API entry point
-│ └─ Features/ # Vertical slices (Auth, Weather, Health, etc.)
+├─ App.Api/              # Minimal API entry point
+│   └─ Features/         # Vertical slices (Auth, Weather, Health, etc.)
 │
-├─ App.Application/ # Contracts, validators, interfaces
+├─ App.Application/      # Contracts, validators, interfaces
 │
-├─ App.Domain/ # Entities, value objects, domain events
+├─ App.Domain/           # Entities, value objects, domain events
 │
-├─ App.Infrastructure/ # EF Core, Identity, repositories, JWT services
+├─ App.Infrastructure/   # EF Core, Identity, repositories, JWT services
 │
-├─ App.AppHost/ # Aspire host orchestrating API + Postgres
+├─ App.AppHost/          # Aspire host orchestrating API + Postgres
 │
-└─ App.ServiceDefaults/ # Aspire defaults (logging, tracing, health)
-`
+└─ App.ServiceDefaults/  # Aspire defaults (logging, tracing, health)
+```
 
 ---
 
@@ -132,3 +132,4 @@ This keeps request/response types, handler logic, and endpoint mapping in one pl
 
 - Use dotnet user-secrets for sensitive values like JWT keys and DB passwords when not running under Aspire.
 - The solution is designed to evolve: just add new features under App.Api/Features/{FeatureName}.
+
