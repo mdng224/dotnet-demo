@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\dotnet-demo\App.Api.csproj" />
+    <ProjectReference Include="..\App.Api\App.Api.csproj" />
   </ItemGroup>
 
 </Project>

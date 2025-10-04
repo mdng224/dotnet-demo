@@ -1,3 +1,4 @@
+using App.Api.Features.Auth;
 using App.ServiceDefaults;
 
 namespace App.Api;
@@ -26,8 +27,8 @@ public class Program
             return Results.Ok(new { db = result });
         });
 
-
         app.MapDefaultEndpoints();
+        app.MapAuthEndpoints();
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())

@@ -9,11 +9,14 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Npgsql" Version="9.5.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\dotnet-demo.ServiceDefaults\App.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\App.ServiceDefaults\App.ServiceDefaults.csproj" />
     <ProjectReference Include="..\App.Application\App.Application.csproj" />
     <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
   </ItemGroup>
